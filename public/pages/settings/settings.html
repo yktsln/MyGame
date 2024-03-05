@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="English">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar</title>
+    <link rel="stylesheet" href="style-settings.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="pageTitle">Ayarlar</h1>
+        <form>
+            <div class="input-group">
+                <label for="language">Dil Seçimi:</label>
+                <select id="language" name="language" onchange="changeLanguage()">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            
+            <div class="input-group" id="input-group-1">
+                <label for="theme">Tema Seçimi:</label>
+                <select id="theme" name="theme" onchange="changeTheme()">
+                    <option value="light">Açık Tema</option>
+                    <option value="dark">Koyu Tema</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="notifications">Bildirimler:</label>
+                <input type="checkbox" id="notifications" name="notifications">
+            </div>
+            <div class="button-group">
+                <button type="submit" onclick="return saveSettings()">Kaydet</button>
+                <button onclick="return goToHomePage()">Ana Sayfaya Geri Dön</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/public/pages/settings/settings.js"></script>
+</body>
+
+</html>
